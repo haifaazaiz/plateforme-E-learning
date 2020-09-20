@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-Compatible" content="ie=edge">
+	<title>E-learning</title>
+	<link rel="shortcut icon" href="img/logo.png">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+	<link rel="stylesheet" href="css/animate.css-main/source/animate.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet"  href="css/s.css">
+	<!---ICONS -->
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!------>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  
+<!--------NAVBAR------>
+
+<nav class="navbar bg-light navbar-light navbar-expand-lg sticky-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/logo.png" class="w-75 h-25" alt="logo" title="logo">
+        </a>
+        <button class="navbar-toggler" type="button" id="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="allcourses.html" class="nav-link">All Courses</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+				<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+				<li class="nav-item"><a href="formateur.html" class="nav-link">Instructor</a></li>
+            </ul>
+            <span class="navbar-text">
+                <a class="btn" id="loginButton" role="button">
+                    <span class="fa fa-sign-in"></span>
+                    Login
+                </a>
+                <a class="btn" id="signUpButton" role="button">
+                    <i class="fa fa-user-plus"></i>
+                    SignUp
+                </a>
+            </span>
+        </div>
+    </div>
+</nav>
+
+   <!------END navbar------>
+
+    	<!-- Login Modal -->
+	<div class="bg-modal modal" role="dialog">
+		<div class="modal-dialog modal-lg" role="content">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4>Login</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form action="login.php" method="POST">
+						<div class="form-row">
+							<div class="form-group col-sm-6">
+								<input type="email" class="form-control form-control-sm mr-1" id="email" name="email" placeholder="Enter email">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-6">
+								<input type="password" class="form-control form-control-sm mr-1" id="password" name="password" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-sm-auto">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox">
+									<label class="form-check-label"> Remember me</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+						</div>
+					</form>
+				</div>	
+			</div>
+		</div>	
+	</div>
+	<!-- End Login Modal -->
+	<!-- Sign up Modal -->
+	<div class="sg-modal modal" role="dialog">
+		<div class="modal-dialog modal-lg" role="content">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4>Sign up and Start learning!</h4>
+					<button type="button" class="close sign" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form action="signup.php" method="POST">
+						<div class="form-row">
+							<div class="form-group col-sm-6">
+								<input type="text" class="form-control form-control-sm mr-1" name="name" id="name" placeholder="full Name">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-6">
+								<input type="email" class="form-control form-control-sm mr-1" name="email1" id="email1" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-6">
+								<input type="password" class="form-control form-control-sm mr-1"  name="password1" id="password1"  placeholder="Password">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-6">
+								<input type="password" class="form-control form-control-sm mr-1"  name="password2" id="password2"  placeholder="Confirm Password">
+							</div>
+						</div>
+						<div class="form-row">
+							<button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary btn-sm ml-1">Sign up</button>        
+						</div>
+					</form>
+				</div>		
+			</div>
+		</div>	
+	</div>
+	<!-- End Sign up Modal -->
+   <!------BANNER------>
+   <div class="background">
+		<section id="banner">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p class="help">How may we help you ? </p>
+						<form name="my_form">
+							<select name="" class="search-field" id="search" onchange="barre_recherche()">
+								<option></option>
+								<option value="How does *** works">How does 'SAS' works</option>
+								<option value="Lifetime Access">Lifetime Access</option>
+								<option value="Downloading courses">Downloading courses</option>
+								<option value="How to become an instructor ?"> How to become an instructor ?</option>
+							</select>
+							<button class="search-btn" type="button" onclick="barre_recherche()"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div> 
+			<!-- Start Breadcrumbs -->
+			<CENTER>
+			<ol class="col-12 breadcrumb">
+				<li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+				<li class="breadcrumb-item active">Services</li>
+			</ol>
+		</CENTER>
+	<!--/ End Breadcrumbs -->
+  <!------END banner section -----> 
+  <!------services section ----->
+
+  <section id ="services">
+
+  	<div class="container">
+  		
+  		<div class="row">
+  			<div class="col-md-12">
+         <h3>Frequently Asked Questions</h3>
+            </div>
+           <div class="col-md-6 services">
+                  
+
+  			      <button class="question1" type="button"> <a href="quest2.html"> How Does SAS work? </a></button>
+  			      
+  			      <button class="question1" type="button"><a href="quest1.html">Lifetime Access </a></button>
+  		  </div>
+  		   
+  		   <div class="col-md-6 services">
+                  
+                  <button class="question1" type="button"><a href="quest3.html">Downloading courses</a></button>
+  			     
+				  <button class="question1" type="button"> <a href="quest4.html"> How to become an instructor ? </a></button>
+  			      
+  		  </div>
+
+       </div>
+  		
+  		
+  	</div>
+
+  </section>
+  
+ <section id="topic">
+
+ 	<div class="container">
+
+      
+ 		 <div class="row ">
+ 		   <div class="col-md-12"> <h3 class="aide">Select a Topic to Search For Help</h3></div>	
+  		  <div class="col-4 text-center">
+  		   	 <a class="image"><img src="img/profile2.png" style="height: 9.5rem;"></a>
+  		   	 <h4>Account setup</h4>
+  		   	 <p>Get started on SAS</p>
+		  </div>
+		   <div class="col-4 text-center">
+  		   	<a class="image"><img src="img/depannage1.png"></a>
+  		   	<h4>Troubleshooting</h4>
+  		   	<p>Solve common problems</p>
+  		  </div>
+  		  <div class="col-4 text-center">
+  		   	<a class="image"><img src="img/enrollement1.png"></a>
+  		   	<h4>Enrollement</h4>
+  		   	<p>Take a course on SAS</p>
+
+  		   </div>
+
+
+
+  		</div>
+ 		
+ 	</div>
+ 	
+ </section>
+  <!-- Start Footer -->
+  <footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 offset-1 col-sm-2">
+				<h5>Links</h5>
+				<ul class="list-unstyled">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="allcourses.html">AllCourses</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.php">Contact</a></li>
+					<li><a href="formateur.html">Instructor</a></li>
+				</ul>
+			</div>
+			<div class="col-7 col-sm-5 text-center">
+				<h5>Our Adress</h5>
+				<adress>
+					National School of Computer Sciences (ENSI), <br>
+					University of la Manouba-Tunisia-Tunis.<br>
+				</adress>
+				<h5>Contact Us</h5>
+				<i class="fa fa-phone fa-lg"></i>:95 139 891<br>
+				<i class="fa fa-fax fa-lg"></i>:71 600 444<br>
+			</div>
+			<div class="col-12 col-sm-4 aligh-self-center">
+				<h5>Connect with us on social media</h5>
+				<div>
+					<i class="fa fa-envelope fa-lg"></i>:
+					<a href="mailto:haifa.azaiz@ensi-uma.tn">haifa.azaiz@ensi-uma.tn</a><br>
+					<i class="fa fa-envelope fa-lg"></i>:
+					<a href="mailto:nessine.satouri@ensi-uma.tn">nessine.satouri@ensi-uma.tn</a><br>
+					<i class="fa fa-envelope fa-lg"></i>:
+					<a href="mailto:meriem.said@ensi-uma.tn">meriem.said@ensi-uma.tn</a><br>
+					<center>
+					<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/haifa.azaiz.9480" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+					<a class="btn btn-social-icon btn-linkedin" href="www.linkedin.com/in/azaiz-haifa-76680219a" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+					<a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/hai1_23/?hl=fr" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<!-- End Footer -->
+	 <!-- Script Source Files -->
+	 <script src="js/script.js"></script>
+	 <script>
+	 function barre_recherche()
+		{
+	   var a=document.getElementById('search').value;
+	  if(a=="How does *** works")
+	  {window.open("./quest2.html");
+  		}
+		  else if(a=="Lifetime Access")
+	  {window.open("./quest1.html");
+  		}
+		 else if(a=="Downloading courses")
+	  {window.open("./quest3.html");
+  		}
+		  else if(a=="How to become an instructor ?")
+	  {window.open("./quest4.html");
+  		}
+};</script>
+	 <!-- jQuery -->
+	 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+	 <!-- Bootstrap JS -->
+	 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <!-- Popper JS -->
+	 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+	 <!-- End Script Source Files -->
+
+</body>
+
+</html>

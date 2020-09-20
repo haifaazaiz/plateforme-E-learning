@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> SERVICES</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/animate.css-main/source/animate.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/stylequest.css">
+    <!--------BootstrapCDN------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+    <!---ICONS -->
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!------>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <div class="background">  
+<!--------NAVBAR------>
+
+  <nav class="navbar bg-light navbar-light navbar-expand-lg sticky-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/logo.png" class="w-75 h-25" alt="logo" title="logo">
+        </a>
+        <button class="navbar-toggler" type="button" id="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="allcourses.html" class="nav-link">All Courses</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+        <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="formateur.html" class="nav-link">Instructor</a></li>
+            </ul>
+            <span class="navbar-text">
+                <a class="btn" id="loginButton" role="button">
+                    <span class="fa fa-sign-in"></span>
+                    Login
+                </a>
+                <a class="btn" id="signUpButton" role="button">
+                    <i class="fa fa-user-plus"></i>
+                    SignUp
+                </a>
+            </span>
+        </div>
+    </div>
+  </nav>
+</div>
+<!---end navbar--->
+
+<!-- Login Modal -->
+<div class="bg-modal modal" role="dialog">
+  <div class="modal-dialog modal-lg" role="content">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Login</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form action="login.php" method="POST">
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="email" class="form-control form-control-sm mr-1" id="email" name="email" placeholder="Enter email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="password" class="form-control form-control-sm mr-1" id="password" name="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-sm-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label"> Remember me</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+          </div>
+        </form>
+      </div>	
+    </div>
+  </div>	
+</div>
+<!-- End Login Modal -->
+<!-- Sign up Modal -->
+<div class="sg-modal modal" role="dialog">
+  <div class="modal-dialog modal-lg" role="content">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Sign up and Start learning!</h4>
+        <button type="button" class="close sign" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form action="signup.php" method="POST">
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="text" class="form-control form-control-sm mr-1" name="name" id="name" placeholder="full Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="email" class="form-control form-control-sm mr-1" name="email1" id="email1" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="password" class="form-control form-control-sm mr-1"  name="password1" id="password1"  placeholder="Password">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="password" class="form-control form-control-sm mr-1"  name="password2" id="password2"  placeholder="Confirm Password">
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign up</button>        
+          </div>
+        </form>
+      </div>		
+    </div>
+  </div>	
+</div>
+<!-- End Sign up Modal -->
+
+<section id="lifetimeaccess">
+  <div class="container">
+    <p class="access ml-auto"> 
+      <a href="index.html"> Home </a> ><a href="services.html">Services</a> >How Does SAS work?
+    </p>
+    <div class="row">  
+      <div class="col-md-3"></div>
+      <div class="col-md-9">
+        <h3>How Does SAS work?</h3>
+        <br>
+          <p>
+            SAS's mission is to improve lives through learning. Our global marketplace features an extensive, multi-language library, which includes thousands of courses taught by expert instructors. 
+            You can take courses across a wide range of categories, some of which include: business & entrepreneurship, programming, academics, the arts, health & fitness, music and much more! 
+          Below are answers to some of the frequently asked questions we receive about how SAS works.</p>
+        <h5>What do SAS courses include?</h5>
+
+        <p>Each "SAS" course is created, owned and managed by the instructor(s) and also the admin(s). The foundation of each course are its lectures, which can include videos, 
+        slides, and text. In addition, instructors can add resources and various types of practice activities, 
+        as a way to enhance the learning experience of students. 
+
+        Additional information on "SAS"’s platforms and features can be reviewed here. 
+
+        For tips on how to find courses you may be interested in taking, please don't hesitate to send us a message.</p>
+
+        <h5>How do I take a "SAS" course?</h5>
+
+        <p>"SAS" courses are entirely on-demand. You can begin the course whenever you like, and there are no deadlines to complete it.
+
+        "SAS" courses can be accessed from several different devices and platforms, including a desktop or laptop. 
+
+        After you enroll in a course, you can access it by clicking on the course link and you will get it immediatly.
+        After add the course to your courses, you can also begin it by logging in and navigating to my Courses in your
+        My profile page.</p> 
+
+        <h5>Do I have to start my course at a certain time? And how long do I have to complete it?</h5>
+
+        <p>As noted above, there are no deadlines to begin or complete the course.
+        Even after you complete the course you will continue to have access to it, provided that your account’s
+        in good standing, and SAS continues to have a license to the course.
+        To learn more about our Lifetime Access policy, please find it in Services page.</p>
+
+        <h5>Is SAS an accredited institution? Do I receive anything after I complete a course?</h5>
+
+        <p>While SAS is not an accredited institution, we offer skills-based courses taught by experts in their field,
+        and we are thinking of making a certificate of completion for each course to document your accomplishment. </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Script Source Files -->
+<script src="js/script.js"></script>
+	 <!-- jQuery -->
+	 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+	 <!-- Bootstrap JS -->
+	 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <!-- Popper JS -->
+	 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+	 <!-- End Script Source Files -->
+</body>
+</html>
